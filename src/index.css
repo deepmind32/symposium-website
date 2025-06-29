@@ -35,11 +35,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
   margin: 0;
-  display: flex;
-  place-items: center;
   width: 100vw;
   min-height: 100dvh;
   min-height: 100vh; /* Fallback for browsers that don't support 100dvh */
