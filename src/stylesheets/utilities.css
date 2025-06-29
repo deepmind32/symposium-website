@@ -1,0 +1,35 @@
+/* Color and background utilities */
+.u-color-blue { color: var(--color-blue); }
+.u-color-dark-blue { color: var(--color-dark-blue); }
+.u-color-orange { color: var(--color-orange); }
+.u-color-dark-orange { color: var(--color-dark-orange); }
+.u-color-white { color: var(--color-white); }
+.u-color-black { color: var(--color-black); }
+
+.u-background-blue { background-color: var(--color-blue); }
+.u-background-dark-blue { background-color: var(--color-dark-blue); }
+.u-background-orange { background-color: var(--color-orange); }
+.u-background-dark-orange { background-color: var(--color-dark-orange); }
+.u-background-white { background-color: var(--color-white); }
+.u-background-black { background-color: var(--color-black); }
+
+/* Font utility classes */
+.u-font-p { font-family: var(--font-p); }
+.u-font-heading { font-family: var(--font-heading); }
+
+.u-font-weight-300 { font-weight: 300; }
+.u-font-weight-400 { font-weight: 400; }
+.u-font-weight-500 { font-weight: 500; }
+.u-font-weight-600 { font-weight: 600; }
+.u-font-weight-700 { font-weight: 700; }
+.u-font-weight-800 { font-weight: 800; }
+.u-font-weight-900 { font-weight: 900; }
+
+.u-font-size-small { font-size: var(--font-size-small); }
+.u-font-size-p { font-size: var(--font-size-p); }
+.u-font-size-h1 { font-size: var(--font-size-h1); }
+.u-font-size-h2 { font-size: var(--font-size-h2); }
+.u-font-size-h3 { font-size: var(--font-size-h3); }
+.u-font-size-h4 { font-size: var(--font-size-h4); }
+.u-font-size-h5 { font-size: var(--font-size-h5); }
+.u-font-size-h6 { font-size: var(--font-size-h6); }
