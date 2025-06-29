@@ -1,3 +1,7 @@
+body {
+  scroll-behavior: smooth;
+}
+
 /* Custom scrollbar styles */
 ::-webkit-scrollbar {
   width: 8px;
