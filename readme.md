@@ -1,0 +1,1 @@
+- In `vite.config.js` change the base name with `/<repo-name>/`. Be careful not to forget the two forward slashes, both are needed.
