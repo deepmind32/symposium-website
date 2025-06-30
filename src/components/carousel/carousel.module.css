@@ -1,0 +1,226 @@
+.carouselSection {
+  width: 100%;
+  padding: 2rem 0;
+  margin: 0;
+  margin-top: 80px;
+}
+
+.carouselContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/7;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--background);
+}
+
+.slideContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.slide:hover .image {
+  filter: brightness(1);
+}
+
+.caption {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  padding: 1.5rem;
+  /* background: rgba(222, 109, 69, 0.9); */
+  background: var(--color-dark-blue);
+  color: white;
+  max-width: 450px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+.caption h3 {
+  font-family: var(--font-secondary);
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  opacity: 1;
+}
+
+.caption p {
+  font-family: var(--font-primary);
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(222, 109, 69, 0.1);
+}
+
+.navButton:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 24px rgba(222, 109, 69, 0.15);
+}
+
+.navButton svg {
+  fill: var(--color-dark-orange);
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.prevButton {
+  left: 1.5rem;
+}
+
+.prevButton:hover svg {
+  transform: translateX(-2px);
+}
+
+.nextButton {
+  right: 1.5rem;
+}
+
+.nextButton:hover svg {
+  transform: translateX(2px);
+}
+
+.indicators {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 2;
+}
+
+.indicator {
+  width: 3.5rem;
+  height: 3px;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  padding: 0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(4px);
+}
+
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    var(--color-orange),
+    var(--color-dark-orange)
+  );
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.indicator.active::after {
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .carouselSection {
+    padding: 2rem 0;
+    margin: 0.5rem 0;
+    margin-top: 80px;
+  }
+
+  .carouselContainer {
+    padding: 0 1rem;
+  }
+
+  .carousel {
+    border-radius: 16px;
+    aspect-ratio: 16/9;
+  }
+
+  .caption {
+    left: 1rem;
+    bottom: 1rem;
+    padding: 0.75rem;
+    max-width: 65%;
+  }
+
+  .caption h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .caption p {
+    font-size: 0.85rem;
+    line-height: 1.3;
+  }
+
+  .navButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .navButton svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .indicator {
+    width: 2.5rem;
+  }
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

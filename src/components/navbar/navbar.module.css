@@ -1,0 +1,296 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: var(--color-dark-blue);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  color: white;
+}
+
+.scrolled {
+  background-color: rgba(17, 44, 100, 0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.mobilelogo {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.link {
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  position: relative;
+  padding: 2px 0;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-blue), var(--color-orange), var(--color-dark-orange));
+  transition: width 0.3s ease;
+  transform-origin: left;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.link.active {
+  color: var(--color-orange);
+}
+
+/* Create a reusable gradient line class */
+.gradientLine {
+  position: relative;
+  padding: 2px 0;
+}
+
+.gradientLine::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-blue), var(--color-orange), var(--color-dark-orange));
+  transition: width 0.3s ease;
+  transform-origin: left;
+}
+
+.gradientLine:hover::after {
+  width: 100%;
+}
+
+/* Apply gradient line to mobile menu items */
+.mobileLinkContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  position: relative;
+  padding: 2px 0;
+  color: white;
+}
+
+.mobileLinkContent::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(to right, var(--color-blue), var(--color-orange), var(--color-dark-orange));
+  transition: width 0.3s ease;
+  transform-origin: left;
+}
+
+.mobileLinkContent:hover::after {
+  width: 100%;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.primaryButton {
+  display: block;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:first-child {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:last-child {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobileMenu {
+  display: none;
+  position: absolute;
+  top: calc(80px + 1rem);
+  right: 1rem;
+  width: 200px;
+  background: var(--color-dark-blue);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.mobileMenuButton {
+  display: none;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Add navbar button styles */
+.navbar button {
+  background: var(--color-dark-orange);
+  color: white;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  background: var(--color-blue);
+}
+
+.mobileMenu.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.mobileLinks li {
+  transition: transform 0.3s ease;
+}
+
+.mobileLinks li:hover {
+  transform: translateX(8px);
+}
+
+.mobileLinkContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.mobileLinkContent svg {
+  color: var(--color-blue);
+  transition: transform 0.3s ease;
+}
+
+.mobileLinkContent:hover svg {
+  transform: translateX(5px);
+}
+
+.mobileDivider {
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0;
+  margin-bottom: 1.5rem;
+  border: none;
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .mobilelogo {
+    display: block;
+    height: 40px;
+    width: auto;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+
+  .mobileMenu:not(.active) {
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .mobileMenu {
+    left: 1rem;
+    right: 1rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .primaryButton {
+    display: none;
+  }
+
+  .mobileMenu {
+    padding-bottom: 1rem;
+  }
+
+  .mobileLinks {
+    margin-bottom: 1.5rem;
+  }
+
+  .mobileMenuButton {
+    display: flex;
+  }
+}

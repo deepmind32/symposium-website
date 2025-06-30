@@ -1,0 +1,82 @@
+.button {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background-color: var(--color-dark-blue);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.primary:hover {
+  background-color: var(--color-blue);
+  transform: translateY(-2px);
+}
+
+.text {
+  background: none;
+  border: none;
+  color: var(--color-dark-blue);
+  padding: 0 0 0.5rem 0;
+  position: relative;
+}
+
+.text::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #2590ac,
+    #112c64,
+    #e4b580,
+    #de6d45
+  );
+  transition: width 0.3s ease;
+  transform-origin: left;
+}
+
+.text:hover::after {
+  width: 100%;
+}
+
+.textGradient {
+  background: none;
+  border: none;
+  color: var(--color-dark-blue);
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+.textGradient::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    #2590ac,
+    #112c64,
+    #e4b580,
+    #de6d45
+  );
+  transition: width 0.3s ease;
+  transform-origin: left;
+}
+
+.textGradient:hover::after {
+  width: 100%;
+} 
