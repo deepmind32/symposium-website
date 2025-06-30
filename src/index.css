@@ -29,6 +29,8 @@
   --font-size-h5: 1.125rem;
   --font-size-h6: 1rem;
 
+  font-size: 18px;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -51,8 +53,12 @@ body {
 
   color: var(--color-dark-blue);
   background-color: var(--color-white);
-  font-family: var(--font-primary);
+  font-family: var(--font-p);
   font-size: var(--font-size-p);
   line-height: 1.5;
   font-weight: 400;
+}
+
+a {
+  text-decoration: none;
 }
