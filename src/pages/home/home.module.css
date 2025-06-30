@@ -1,0 +1,21 @@
+.hero-section {
+  position: relative;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 8rem 0;
+  min-height: calc(100vh - 80px); /* Adjusting for navbar height */
+}
+
+.hero-section main {
+  max-width: 60vw;
+}
+
+.hero-section h1 {
+  margin-bottom: 1rem;
+}
+
+.hero-button__wrapper {
+  margin-top: 2rem;
+}

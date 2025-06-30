@@ -33,3 +33,5 @@
 .u-font-size-h4 { font-size: var(--font-size-h4); }
 .u-font-size-h5 { font-size: var(--font-size-h5); }
 .u-font-size-h6 { font-size: var(--font-size-h6); }
+
+.u-text-no-wrap { white-space: nowrap; }
