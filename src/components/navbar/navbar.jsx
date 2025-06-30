@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { HiArrowRight } from "react-icons/hi";
+import { Link } from "react-router";
+
 import styles from "./navbar.module.css";
 import Button from "../button/button";
+import { useLocation } from "react-router";
 
 // const menuItems = [
 //   { href: "/", text: "HOME" },
@@ -24,7 +27,7 @@ export default function Navbar({
 }) {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = "Do something here";
+  const pathname = useLocation().pathname;
 
   const wordmark_image = wordmark ?? pictorial;
 
@@ -45,18 +48,18 @@ export default function Navbar({
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
   console.log(menu_items);
 
   return (
     <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <a href="/">
+      <Link to="/">
         <img
           src={wordmark_image}
           alt="Hainet Logo"
           width={180}
           height={60}
           quality={100}
-          priority
           className={styles.logo}
           style={{
             objectFit: "contain",
@@ -70,7 +73,6 @@ export default function Navbar({
           width={60}
           height={60}
           quality={100}
-          priority
           className={styles.mobilelogo}
           style={{
             objectFit: "contain",
@@ -78,25 +80,26 @@ export default function Navbar({
             width: "auto",
           }}
         />
-      </a>
+      </Link>
+
       <nav className={styles.nav}>
         <ul className={styles.links}>
           {menu_items.map((item) => (
             <li key={item.href}>
-              <a
-                href={item.href}
+              <Link
+                to={item.href}
                 className={`${styles.link} ${
                   pathname === item.href ? styles.active : ""
                 }`}
               >
                 {item.text}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
       </nav>
       <div className={styles.rightSection}>
-        <a href={cta_item.href}>
+        <a href={cta_item.href} target="_blank" rel="noopener noreferrer">
           <Button variant="primary" className={styles.primaryButton}>
             {cta_item.text}
           </Button>
@@ -117,8 +120,8 @@ export default function Navbar({
             {menu_items.map((item, index) => (
               <li key={item.href}>
                 {index > 0 && <hr className={styles.mobileDivider} />}
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className={`${styles.link} ${
                     pathname === item.href ? styles.active : ""
                   }`}
@@ -128,12 +131,12 @@ export default function Navbar({
                     {item.text}
                     <HiArrowRight size={20} />
                   </div>
-                </a>
+                </Link>
               </li>
             ))}
-          </ul>{" "}
+          </ul>
           <div className={styles.mobileMenuButton}>
-            <a href={cta_item.href} onClick={closeMenu}>
+            <a href={cta_item.href} onClick={closeMenu} target="_blank" rel="noopener noreferrer">
               <Button variant="primary">{cta_item.text}</Button>
             </a>
           </div>
