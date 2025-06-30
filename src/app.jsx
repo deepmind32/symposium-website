@@ -3,10 +3,16 @@ import { Routes, Route, Link, HashRouter } from "react-router-dom";
 import Navbar from "./components/navbar/navbar";
 import HomePage from "./pages/home/home";
 import AboutPage from "./pages/about/about";
+import DataHubPage from "./pages/datahub/datahub";
+import SymposiumPage from "./pages/symposium/symposium";
+
+import styles from "./app.module.css";
 
 const menu_items = [
   { href: "/", text: "Home" },
   { href: "/about", text: "About PriFed" },
+  { href: "/datahub", text: "DataHub" },
+  { href: "/symposium", text: "Symposium" },
 ];
 
 const cta_item = {
@@ -24,10 +30,14 @@ export default function App() {
         wordmark="/logo--white.png"
       />
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
+      <div className={styles["main-wrapper"]}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/datahub" element={<DataHubPage />} />
+          <Route path="/symposium" element={<SymposiumPage />} />
+        </Routes>
+      </div>
     </HashRouter>
   );
 }
