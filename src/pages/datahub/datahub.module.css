@@ -1,0 +1,18 @@
+.hero {
+	position: relative;
+	background: var(--color-blue-overlay);
+	margin-top: 80px;
+	text-align: center;
+	padding: 4rem 3rem;
+}
+
+.hero p {
+	max-width: 60vw;
+	margin: 0 auto;
+}
+
+.datahub__coming-soon {
+	background-color: var(--color-white);
+	padding: 8rem 3rem;
+	text-align: center;
+}
