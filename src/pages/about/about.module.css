@@ -1,0 +1,30 @@
+.about__hero {
+	position: relative;
+	padding: 4rem 3rem;
+	margin-top: 4rem;
+	background: var(--color-blue-overlay);
+	color: var(--color-dark-blue);
+}
+
+.about__hero p {
+	max-width: 900px;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	line-height: 1.8;
+}
+
+.about__hero ul {
+	margin-top: 0.6rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+
+.about__hero ul li {
+	margin-left: 1.5rem;
+	color: var(--color-dark-orange);
+}
+
+.about__hero ul li span {
+	color: var(--color-dark-blue)
+}
