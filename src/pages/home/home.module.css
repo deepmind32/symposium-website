@@ -1,22 +1,58 @@
 .hero-section {
-  position: relative;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 8rem 0;
+	position: relative;
+	text-align: center;
+	padding: 8rem 0;
 	min-height: calc(100vh - 80px);
 	margin-top: 80px;
+	background: var(--color-blue-overlay);
 }
 
 .hero-section main {
-  max-width: 60vw;
+	max-width: 60vw;
+	margin: 0 auto;
 }
 
 .hero-section h1 {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .hero-button__wrapper {
-  margin-top: 2rem;
+	margin-top: 2rem;
+}
+
+/* Home Recent Updates section */
+.home__updates {
+	padding: 5rem 3rem;
+}
+
+.home__updates h1 {
+	text-align: center;
+	position: relative;
+}
+
+.home__updates__content {
+	margin-top: 3.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 2rem;
+}
+
+/* Home mission section begins here*/
+.home__mission {
+	position: relative;
+	background: var(--color-blue-overlay);
+	padding: 6rem 3rem;
+	text-align: center;
+}
+
+.home__mission__main {
+	max-width: 60vw;
+	margin: 0 auto;
+}
+
+.home__mission__main h1 {
+	margin-bottom: 1rem;
+	/* font-weight: 600; */
+	/* font-size: calc(var(--font-size-h1) * 1.2); */
 }

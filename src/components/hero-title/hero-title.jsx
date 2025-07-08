@@ -3,10 +3,7 @@
 import { motion } from "framer-motion";
 import styles from "./hero-title.module.css";
 
-export default function HeroTitle({ content, title, subtitle }) {
-  // Support both old and new prop formats
-  const displayContent = content || title;
-  
+export default function HeroTitle({ title, subtitle }) {
   return (
     <div className={styles.titleWrapper}>
       <motion.h1
@@ -16,7 +13,7 @@ export default function HeroTitle({ content, title, subtitle }) {
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
       >
-        {displayContent}
+        {title}
       </motion.h1>
       
       {subtitle && (

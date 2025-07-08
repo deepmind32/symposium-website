@@ -7,6 +7,7 @@ import DataHubPage from "./pages/datahub/datahub";
 import SymposiumPage from "./pages/symposium/symposium";
 
 import styles from "./app.module.css";
+import Footer from "./components/footer/footer";
 
 const menu_items = [
 	{ href: "/", text: "Home" },
@@ -36,6 +37,8 @@ export default function App() {
 				<Route path="/datahub" element={<DataHubPage />} />
 				<Route path="/symposium" element={<SymposiumPage />} />
 			</Routes>
+
+			<Footer />
 		</HashRouter>
 	);
 }

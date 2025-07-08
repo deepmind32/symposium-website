@@ -2,63 +2,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
 
 :root {
-  /* color variable definition */
-  --color-blue: #2590ac;
-  --color-dark-blue: #112c64;
-  --color-orange: #e4b580;
-  --color-dark-orange: #de6d45;
-  --color-black: #000;
-  --color-white: #fff;
+	/* color variable definition */
+	--color-blue: #2590ac;
+	--color-dark-blue: #112c64;
+	--color-orange: #e4b580;
+	--color-dark-orange: #de6d45;
+	--color-black: #000;
+	--color-white: #fff;
+	--color-grey: #f8f9fa;
 
-  --color-blue-overlay: linear-gradient(
-    135deg,
-    rgba(66, 153, 225, 0.1),
-    rgba(49, 130, 206, 0.1)
-  );
+	--color-blue-overlay: linear-gradient(
+		135deg,
+		rgba(66, 153, 225, 0.08),
+		rgba(49, 130, 206, 0.12)
+	);
 
-  /* typography variables definition */
-  --font-p: "Poppins", sans-serif;
-  --font-heading: "Playfair Display", serif;
+	/* typography variables definition */
+	--font-p: "Poppins", sans-serif;
+	--font-heading: "Playfair Display", serif;
 
-  --font-size-small: 0.75rem;
-  --font-size-p: 1rem;
-  --font-size-h1: 2.25rem;
-  --font-size-h2: 1.875rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h4: 1.25rem;
-  --font-size-h5: 1.125rem;
-  --font-size-h6: 1rem;
+	--font-size-small: 0.75rem;
+	--font-size-p: 1rem;
+	--font-size-h1: 2.25rem;
+	--font-size-h2: 1.875rem;
+	--font-size-h3: 1.5rem;
+	--font-size-h4: 1.25rem;
+	--font-size-h5: 1.125rem;
+	--font-size-h6: 1rem;
 
-  font-size: 18px;
+	font-size: 18px;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  position: relative;
-  margin: 0;
-  width: 100vw;
-  min-height: 100dvh;
-  min-height: 100vh; /* Fallback for browsers that don't support 100dvh */
-  overflow-x: hidden;
+	position: relative;
+	margin: 0;
+	width: 100vw;
+	min-height: 100dvh;
+	min-height: 100vh; /* Fallback for browsers that don't support 100dvh */
+	overflow-x: hidden;
 
-  color: var(--color-dark-blue);
-  background-color: var(--color-white);
-  font-family: var(--font-p);
-  font-size: var(--font-size-p);
-  line-height: 1.5;
-  font-weight: 400;
+	color: var(--color-dark-blue);
+	background-color: var(--color-grey);
+	font-family: var(--font-p);
+	font-size: var(--font-size-p);
+	line-height: 1.5;
+	font-weight: 400;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
