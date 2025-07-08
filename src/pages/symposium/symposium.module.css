@@ -1,0 +1,827 @@
+/* Hero Section */
+.hero {
+	background-color: var(--color-dark-blue);
+	padding: 6rem 2rem;
+	text-align: center;
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+.hero::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		135deg,
+		rgba(255, 255, 255, 0.05) 0%,
+		transparent 50%
+	);
+	pointer-events: none;
+}
+
+.heroContent {
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+
+.heroTag {
+	display: inline-block;
+	background: var(--color-orange);
+	color: var(--color-dark-blue);
+	padding: 0.6rem 1.2rem;
+	border-radius: 50px;
+	font-size: 0.8rem;
+	line-height: 0.8rem;
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.mainTitle {
+	color: white;
+	margin-bottom: 1rem;
+	line-height: 1.1;
+	font-weight: 700;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+	display: block;
+	color: var(--color-dark-orange);
+	margin-top: 0.5rem;
+	font-size: var(--font-size-h1);
+	font-weight: 600;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heroDescription {
+	color: rgba(255, 255, 255, 0.9);
+	margin: 2rem auto;
+	max-width: 600px;
+	line-height: 1.6;
+	font-weight: 400;
+}
+
+.eventDetails {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1rem;
+	margin: 3rem 0;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.eventCard {
+	background: var(--color-white);
+	color: var(--color-dark-blue);
+	border-radius: 20px;
+	padding: 2rem 1.5rem;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	border: 1px solid rgba(37, 144, 172, 0.1);
+	position: relative;
+	overflow: hidden;
+}
+
+.eventCard:hover::before {
+	transform: scaleX(1);
+}
+
+.eventCard:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+	border-color: var(--color-blue);
+}
+
+.eventHeader {
+	margin-bottom: 1.5rem;
+	position: relative;
+}
+
+.eventLabel {
+	font-size: 0.75rem;
+	color: var(--color-dark-blue);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	background-color: var(--color-orange);
+	border-radius: 50px;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+}
+
+.eventValue {
+	font-size: 1.3rem;
+	color: var(--color-dark-blue);
+	font-weight: 700;
+	margin-bottom: 0.3rem;
+	line-height: 1.3;
+}
+
+.heroButtons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.heroButtons button {
+	background: var(--color-dark-orange);
+}
+
+.heroStats {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	margin-top: 3rem;
+	flex-wrap: wrap;
+}
+
+.statItem {
+	text-align: center;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 1.5rem;
+	border-radius: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	min-width: 120px;
+}
+
+.statNumber {
+	font-size: 2.5rem;
+	font-weight: 700;
+	color: var(--color-orange);
+	font-family: var(--font-heading);
+	margin-bottom: 0.5rem;
+}
+
+.statLabel {
+	font-size: 0.9rem;
+	color: rgba(255, 255, 255, 0.9);
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+/* Main Content */
+.section__about {
+	position: relative;
+	background: var(--color-blue-overlay);
+	padding: 3rem 2rem;
+}
+
+.section__about p {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: justify;
+	margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+	color: var(--color-dark-blue);
+	text-align: center;
+	margin-bottom: 2rem;
+	position: relative;
+	font-weight: 600;
+}
+
+.section__topics {
+	position: relative;
+	padding: 3rem 2rem;
+}
+
+.section__topics ul {
+	margin: 0 auto;
+	max-width: 900px;
+	color: var(--color-dark-orange);
+	padding-left: 1.5rem;
+	margin-top: 4rem;
+}
+
+.section__topics ul li {
+	margin-bottom: 0.5rem;
+}
+
+.section__topics li span {
+	color: var(--color-dark-blue);
+}
+
+.section__topics p {
+	max-width: 900px;
+	margin: 0 auto;
+	margin-top: 2rem;
+}
+
+/* Call for Participants */
+.callSection {
+	background: linear-gradient(
+		135deg,
+		rgba(37, 144, 172, 0.05) 0%,
+		rgba(228, 181, 128, 0.08) 100%
+	);
+	border-radius: 20px;
+	padding: 3rem;
+	margin: 4rem 0;
+	border: 1px solid rgba(37, 144, 172, 0.1);
+}
+
+/* Important Dates */
+.datesList {
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 15px;
+	padding: 2rem;
+	margin: 2rem 0;
+	border: 1px solid rgba(17, 44, 100, 0.1);
+}
+
+.dateItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 0;
+	border-bottom: 1px solid rgba(17, 44, 100, 0.1);
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.dateItem:last-child {
+	border-bottom: none;
+}
+
+.dateLabel {
+	font-weight: 500;
+	color: var(--color-dark-blue);
+	flex: 1;
+	min-width: 250px;
+}
+
+.dateValue {
+	font-weight: 600;
+	color: var(--color-blue);
+	text-align: right;
+}
+
+.actionButtons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+/* Organizers */
+.organizationLogos {
+	margin: 3rem 0;
+}
+
+.subsectionTitle {
+	font-size: 1.5rem;
+	color: var(--color-dark-blue);
+	margin-bottom: 1.5rem;
+	font-weight: 600;
+	text-align: center;
+}
+
+.logoGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 3rem;
+	margin: 3rem 0;
+}
+
+.logoItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+
+.logoItem:hover {
+	transform: translateY(-3px);
+}
+
+.logoLink {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	color: inherit;
+	transition: all 0.3s ease;
+}
+
+.logoLink:hover {
+	transform: translateY(-2px);
+}
+
+.logoContainer {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin-bottom: 1rem;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease;
+}
+
+.logoLink:hover .logoContainer {
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+	transform: scale(1.05);
+}
+
+.logoImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.logoName {
+	font-size: 1.2rem;
+	color: var(--color-dark-blue);
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.logoLink:hover .logoName {
+	color: var(--color-blue);
+}
+
+.logoLabel {
+	font-size: 0.9rem;
+	color: var(--color-blue);
+	font-weight: 500;
+	margin-top: 0.5rem;
+	opacity: 0.8;
+}
+
+.organizingChairs {
+	margin: 4rem 0;
+}
+
+.chairsGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+
+.chairCard {
+	transition: transform 0.3s ease;
+}
+
+.chairCard:hover {
+	transform: translateY(-4px);
+}
+
+.chairLink {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	color: inherit;
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 12px;
+	padding: 1.5rem;
+	border: 1px solid rgba(17, 44, 100, 0.08);
+	transition: all 0.3s ease;
+}
+
+.chairLink:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 15px rgba(17, 44, 100, 0.1);
+}
+
+.chairImageContainer {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto 1rem;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.chairImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.chairInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.chairName {
+	font-size: 1.1rem;
+	color: var(--color-dark-blue);
+	font-weight: 600;
+	margin-bottom: 0.2rem;
+}
+
+.chairAffiliation {
+	font-size: 0.8rem;
+	color: var(--color-dark-blue);
+	font-weight: 400;
+	opacity: 0.7;
+	text-align: center;
+}
+
+.deliveryTeam {
+	margin: 4rem 0;
+}
+
+.teamGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 1.5rem;
+	margin: 2rem 0;
+}
+
+.teamCard {
+	transition: transform 0.3s ease;
+}
+
+.teamCard:hover {
+	transform: scale(1.02);
+}
+
+.teamLink {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	color: inherit;
+	background: rgba(255, 255, 255, 0.95);
+	border-radius: 12px;
+	padding: 1.5rem;
+	border: 1px solid rgba(17, 44, 100, 0.08);
+	transition: all 0.3s ease;
+}
+
+.teamLink:hover {
+	transform: scale(1.02);
+	box-shadow: 0 4px 15px rgba(17, 44, 100, 0.1);
+}
+
+.teamImageContainer {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto 1rem;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.teamImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.teamInfo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.3rem;
+}
+
+.teamName {
+	font-size: 1rem;
+	color: var(--color-dark-blue);
+	font-weight: 600;
+	margin-bottom: 0.2rem;
+}
+
+/* New Sections Styles */
+
+/* Call for Participants Section (merged with Important Dates) */
+.section__call {
+	position: relative;
+	background: var(--color-blue-overlay);
+	padding: 3rem 2rem;
+}
+
+.section__call p {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: justify;
+	margin-bottom: 2rem;
+}
+
+.section__call .subsectionTitle {
+	max-width: 900px;
+	margin: 3rem auto 1.5rem;
+	text-align: center;
+}
+
+.section__call .datesList {
+	background: rgba(255, 255, 255, 0.9);
+	border-radius: 15px;
+	padding: 2rem;
+	margin: 2rem auto;
+	border: 1px solid rgba(17, 44, 100, 0.15);
+	max-width: 900px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.section__call .actionButtons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	margin: 2rem auto;
+	max-width: 900px;
+}
+
+/* Support Section */
+.section__support {
+	position: relative;
+	padding: 3rem 2rem;
+}
+
+.section__support p {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: justify;
+	margin-bottom: 1.5rem;
+}
+
+/* Organizers Section */
+.section__organizers {
+	position: relative;
+	background: var(--color-blue-overlay);
+	padding: 3rem 2rem;
+}
+
+.section__organizers p {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 1.5rem;
+}
+
+.section__organizers .organizationLogos,
+.section__organizers .organizingChairs,
+.section__organizers .deliveryTeam {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.hero {
+		padding: 4rem 1rem;
+	}
+
+	.main {
+		padding: 0 1rem;
+	}
+
+	.section {
+		margin: 2rem 0;
+		padding: 2rem 0;
+	}
+
+	.eventDetails {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+		margin: 2rem 0;
+	}
+
+	.eventCard {
+		padding: 1.5rem 1.2rem;
+	}
+
+	.heroButtons {
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.heroButtons button {
+		width: 100%;
+		max-width: 280px;
+	}
+
+	.heroStats {
+		gap: 2rem;
+	}
+
+	.statNumber {
+		font-size: 2rem;
+	}
+
+	.dateItem {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+	}
+
+	.dateValue {
+		text-align: left;
+	}
+
+	.actionButtons {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.actionButtons button {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.organizersGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.logoGrid {
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		gap: 2rem;
+	}
+
+	.logoContainer {
+		width: 100px;
+		height: 100px;
+	}
+
+	.logoName {
+		font-size: 1.1rem;
+	}
+
+	.logoLabel {
+		font-size: 0.85rem;
+	}
+
+	.chairsGrid,
+	.teamGrid {
+		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		gap: 1rem;
+	}
+
+	.chairCard,
+	.teamCard {
+		margin: 0 auto;
+		max-width: 200px;
+	}
+
+	.chairLink,
+	.teamLink {
+		padding: 1.2rem;
+	}
+
+	.chairImageContainer {
+		width: 70px;
+		height: 70px;
+	}
+
+	.teamImageContainer {
+		width: 60px;
+		height: 60px;
+	}
+
+	.chairName,
+	.teamName {
+		font-size: 0.9rem;
+	}
+
+	.chairAffiliation {
+		font-size: 0.75rem;
+	}
+
+	.callSection {
+		padding: 2rem 1rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero {
+		padding: 3rem 1rem;
+	}
+
+	.heroTag {
+		font-size: 0.8rem;
+		padding: 0.4rem 1rem;
+	}
+
+	.heroDescription {
+		font-size: 1rem;
+		margin: 1.5rem auto;
+	}
+
+	.heroStats {
+		gap: 1.5rem;
+	}
+
+	.statNumber {
+		font-size: 1.8rem;
+	}
+
+	.statItem {
+		padding: 1rem;
+		min-width: 100px;
+	}
+
+	.eventCard {
+		padding: 1.5rem 1rem;
+	}
+
+	.eventLabel {
+		font-size: 0.7rem;
+		padding: 0.4rem 0.8rem;
+	}
+
+	.eventValue {
+		font-size: 1.1rem;
+	}
+
+	.topicsList,
+	.datesList,
+	.organizerGroup {
+		padding: 1.5rem;
+	}
+
+	.chairCard,
+	.teamCard {
+		margin: 0 auto;
+		max-width: 180px;
+	}
+
+	.chairLink,
+	.teamLink {
+		padding: 1rem;
+	}
+
+	.chairsGrid,
+	.teamGrid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	.chairImageContainer {
+		width: 60px;
+		height: 60px;
+	}
+
+	.teamImageContainer {
+		width: 50px;
+		height: 50px;
+	}
+
+	.chairName,
+	.teamName {
+		font-size: 0.9rem;
+	}
+
+	.chairAffiliation {
+		font-size: 0.7rem;
+	}
+
+	.logoGrid {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.5rem;
+	}
+
+	.logoContainer {
+		width: 80px;
+		height: 80px;
+	}
+
+	.logoName {
+		font-size: 1rem;
+	}
+
+	.logoLabel {
+		font-size: 0.8rem;
+	}
+
+	.mainTitle {
+		font-size: 2rem;
+	}
+
+	.subtitle {
+		font-size: 1.4rem;
+	}
+
+	.sectionTitle {
+		font-size: 1.5rem;
+	}
+
+	.logoGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.logoPlaceholder {
+		width: 100px;
+		height: 100px;
+	}
+}
