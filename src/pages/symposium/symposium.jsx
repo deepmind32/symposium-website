@@ -1,6 +1,7 @@
 import styles from "./symposium.module.css";
 import Button from "../../components/button/button";
 import Shapes from "../../components/shapes/shapes";
+import TeamMemberCard from "../../components/team/team";
 
 export default function SymposiumPage() {
 	return (
@@ -9,14 +10,14 @@ export default function SymposiumPage() {
 				<div className={styles.heroContent}>
 					<div className={styles.heroTag}>International Symposium 2025</div>
 
+					<span className={styles.subtitle}>PriFed Symposium - 2025</span>
 					<h1 className={`${styles.mainTitle} u-font-heading`}>
-						Privacy Preserving Federated Learning Data
-						<span className={styles.subtitle}>PriFedData Symposium - 2025</span>
+						Privacy Preservation of Data through Federated Learning
 					</h1>
 
 					<p className={styles.heroDescription}>
 						Advancing Health AI Innovation Through Secure, Ethical, and
-						Inclusive Data Collaboration
+						Inclusive Collaboration Without Sharing Raw Data
 					</p>
 
 					<div className={styles.eventDetails}>
@@ -43,7 +44,13 @@ export default function SymposiumPage() {
 					</div>
 
 					<div className={styles.heroButtons}>
-						<Button variant="primary">Download Call for Participants</Button>
+						<a
+							href="https://forms.gle/gpUVx16gSf5jsM5x7"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Button variant="primary">Register for the Symposium</Button>
+						</a>
 					</div>
 
 					{/* <div className={styles.heroStats}>
@@ -71,20 +78,21 @@ export default function SymposiumPage() {
 				</h2>
 
 				<p className={styles.description}>
-					The PriFedData Symposium 2025, to be held in Kathmandu, Nepal, in
+					The PriFed Symposium 2025, to be held in Kathmandu, Nepal, in
 					mid-September, is an international forum that brings together
 					researchers, practitioners, policymakers, and industry experts to
-					explore Privacy-Preserving Health AI in Resource-Limited Settings and
-					foster interdisciplinary dialogue, present cutting-edge research, and
-					facilitate collaborative action at the intersection of health data
-					privacy, federated learning, and equitable AI systems in
-					resource-limited settings.
+					explore privacy-preserving{" "}
+					<span className="u-color-dark-orange">Health AI</span> in
+					resource-limited settings and foster interdisciplinary dialogue,
+					present cutting-edge research, and facilitate collaborative action at
+					the intersection of health data privacy, federated learning, and
+					equitable AI systems in resource-limited settings.
 				</p>
 				<p className={styles.description}>
 					The symposium will explore emerging frameworks, practical challenges,
 					and collaborative solutions for privacy-preserving data sharing and
 					analysis in healthcare. Central to the event is the development of the
-					PriFedData Mechanism, a federated architecture designed to facilitate
+					PriFed mechanism, a federated architecture designed to facilitate
 					secure, ethical, and inclusive health data collaboration.
 				</p>
 
@@ -108,7 +116,7 @@ export default function SymposiumPage() {
 						</span>
 					</li>
 					<li>
-						<span>Real-world Case studies of Data Sharing Mechanisms</span>
+						<span>Real-world case studies of data sharing mechanisms</span>
 					</li>
 					<li>
 						<span>Ethical and regulatory frameworks for data sovereignty</span>
@@ -118,7 +126,7 @@ export default function SymposiumPage() {
 					</li>
 					<li>
 						<span>
-							Inclusive design and community participation in Health AI Research
+							Inclusive design and community participation in Health AI research
 						</span>
 					</li>
 				</ul>
@@ -138,13 +146,13 @@ export default function SymposiumPage() {
 				</h2>
 				<p className={styles.description}>
 					We welcome researchers, developers, health professionals, policy
-					advocates, and community leaders to take part in the PriFedData
-					Symposium 2025. Whether you are pioneering privacy-preserving
-					technologies or interested in learning how these systems can be
-					deployed responsibly in real-world contexts, your contributions are
-					vital.
+					advocates, and community leaders to take part in the{" "}
+					<span className="u-color-dark-orange">PriFed Symposium 2025</span>.
+					Whether you are pioneering privacy-preserving technologies or
+					interested in learning how these systems can be deployed responsibly
+					in real-world contexts, your contributions are vital.
 				</p>
-				
+
 				<h3 className={`${styles.subsectionTitle} u-font-heading`}>
 					Important Dates
 				</h3>
@@ -173,13 +181,6 @@ export default function SymposiumPage() {
 					</div>
 				</div>
 
-				<div className={styles.actionButtons}>
-					<Button variant="primary">
-						Download Call for Participants PDF
-					</Button>
-					<Button variant="primary">Submit Registration/Abstracts</Button>
-				</div>
-				
 				<Shapes variant="big" color="blue" />
 			</section>
 
@@ -190,8 +191,8 @@ export default function SymposiumPage() {
 					Support
 				</h2>
 				<p className={styles.description}>
-					Funding support may be available for participants to cover the cost
-					of participation, including travel and lodging on a need basis for
+					Funding support may be available for participants to cover the cost of
+					participation, including travel and lodging on a need basis for
 					participants within Nepal. If you require funding support, please
 					indicate this in your registration.
 				</p>
@@ -221,55 +222,74 @@ export default function SymposiumPage() {
 					</h3>
 					<div className={styles.logoGrid}>
 						<div className={styles.logoItem}>
-							<a href="https://hainet.org" className={styles.logoLink} target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://hainet.org"
+								className={styles.logoLink}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<div className={styles.logoContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=120&fit=crop&crop=center" 
-										alt="HAINet Logo" 
+									<img
+										src="./organizations/hainet.png"
+										alt="HAINet Logo"
 										className={styles.logoImage}
 									/>
 								</div>
-								<h4 className={styles.logoName}>HAINet</h4>
 								<p className={styles.logoLabel}>Health AI for All Network</p>
 							</a>
 						</div>
 						<div className={styles.logoItem}>
-							<a href="https://unil.ch" className={styles.logoLink} target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://unil.ch"
+								className={styles.logoLink}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<div className={styles.logoContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=120&h=120&fit=crop&crop=center" 
-										alt="UNIL Logo" 
+									<img
+										src="./organizations/unil.png"
+										alt="UNIL Logo"
 										className={styles.logoImage}
 									/>
 								</div>
-								<h4 className={styles.logoName}>UNIL</h4>
 								<p className={styles.logoLabel}>University of Lausanne</p>
 							</a>
 						</div>
 						<div className={styles.logoItem}>
-							<a href="https://iitd.ac.in" className={styles.logoLink} target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://abdn.ac.uk"
+								className={styles.logoLink}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<div className={styles.logoContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=120&h=120&fit=crop&crop=center" 
-										alt="IIT Delhi Logo" 
+									<img
+										src="./organizations/aberdeen.png"
+										alt="Aberdeen Logo"
 										className={styles.logoImage}
 									/>
 								</div>
-								<h4 className={styles.logoName}>IIT Delhi</h4>
-								<p className={styles.logoLabel}>Indian Institute of Technology Delhi</p>
+								<p className={styles.logoLabel}>University of Aberdeen</p>
 							</a>
 						</div>
 						<div className={styles.logoItem}>
-							<a href="https://abdn.ac.uk" className={styles.logoLink} target="_blank" rel="noopener noreferrer">
+							<a
+								href="https://iitd.ac.in"
+								className={styles.logoLink}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<div className={styles.logoContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=120&h=120&fit=crop&crop=center" 
-										alt="Aberdeen Logo" 
+									<img
+										src="./organizations/iit-delhi.png"
+										alt="IIT Delhi Logo"
+										style={{ width: 100, height: "auto" }}
 										className={styles.logoImage}
 									/>
 								</div>
-								<h4 className={styles.logoName}>Aberdeen</h4>
-								<p className={styles.logoLabel}>University of Aberdeen</p>
+								<p className={styles.logoLabel}>
+									Indian Institute of Technology Delhi
+								</p>
 							</a>
 						</div>
 					</div>
@@ -281,51 +301,47 @@ export default function SymposiumPage() {
 						Organizing Chairs
 					</h3>
 					<div className={styles.chairsGrid}>
-						<div className={styles.chairCard}>
-							<a href="mailto:binod@example.com" className={styles.chairLink} target="_blank" rel="noopener noreferrer">
-								<div className={styles.chairImageContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" 
-										alt="Prof. Binod Bhattarai" 
-										className={styles.chairImage}
-									/>
-								</div>
-								<div className={styles.chairInfo}>
-									<h4 className={styles.chairName}>Prof. Binod Bhattarai</h4>
-									<p className={styles.chairAffiliation}>University of Aberdeen</p>
-								</div>
-							</a>
-						</div>
-						<div className={styles.chairCard}>
-							<a href="mailto:kiran@example.com" className={styles.chairLink} target="_blank" rel="noopener noreferrer">
-								<div className={styles.chairImageContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" 
-										alt="Dr. Kiran Raj Paney" 
-										className={styles.chairImage}
-									/>
-								</div>
-								<div className={styles.chairInfo}>
-									<h4 className={styles.chairName}>Dr. Kiran Raj Paney</h4>
-									<p className={styles.chairAffiliation}>IIT Delhi</p>
-								</div>
-							</a>
-						</div>
-						<div className={styles.chairCard}>
-							<a href="mailto:yash@example.com" className={styles.chairLink} target="_blank" rel="noopener noreferrer">
-								<div className={styles.chairImageContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" 
-										alt="Prof. Yash Raj Shrestha" 
-										className={styles.chairImage}
-									/>
-								</div>
-								<div className={styles.chairInfo}>
-									<h4 className={styles.chairName}>Prof. Yash Raj Shrestha</h4>
-									<p className={styles.chairAffiliation}>University of Lausanne</p>
-								</div>
-							</a>
-						</div>
+						<TeamMemberCard
+							member={{
+								name: "Prof. Binod Bhattarai",
+								role: "University of Aberdeen",
+								image: "./teams/binod.png",
+								socials: {
+									website: "https://sites.google.com/view/bbinod/",
+									linkedin:
+										"https://www.linkedin.com/in/binod-bhattarai-3a857a24/",
+									twitter: "https://x.com/realBBhattarai",
+								},
+								type: "Symposium Chair",
+							}}
+						/>
+						<TeamMemberCard
+							member={{
+								name: "Dr. Kiran Raj Pandey",
+								role: "Health AI for All Network",
+								image: "./teams/kiran.png",
+								socials: {
+									website: "https://www.kiranrajpandey.com/",
+									// linkedin: null,
+									twitter: "https://x.com/KiranRP",
+								},
+								type: "Co-Chairs",
+							}}
+						/>
+						<TeamMemberCard
+							member={{
+								name: "Prof. Yash Raj Shrestha",
+								role: "University of Lausanne",
+								image: "./teams/yash.png",
+								socials: {
+									website:
+										"https://scholar.google.com/citations?user=LaJfdx0AAAAJ",
+									linkedin: "https://www.linkedin.com/in/yash-raj-shrestha",
+									// twitter: "https://x.com/KiranRP",
+								},
+								type: "Co-Chairs",
+							}}
+						/>
 					</div>
 				</div>
 
@@ -334,66 +350,22 @@ export default function SymposiumPage() {
 					<h3 className={`${styles.subsectionTitle} u-font-heading`}>
 						Delivery Team
 					</h3>
-					<div className={styles.teamGrid}>
-						<div className={styles.teamCard}>
-							<a href="mailto:aavash@example.com" className={styles.teamLink} target="_blank" rel="noopener noreferrer">
-								<div className={styles.teamImageContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=100&h=100&fit=crop&crop=face" 
-										alt="Aavash Chhetri" 
-										className={styles.teamImage}
-									/>
-								</div>
-								<div className={styles.teamInfo}>
-									<h4 className={styles.teamName}>Aavash Chhetri</h4>
-								</div>
-							</a>
+					<div className={styles.deliveryTeamGrid}>
+						<div className={styles.deliveryTeamCard}>
+							<h4 className={styles.deliveryTeamName}>Aavash Chhetri</h4>
 						</div>
-						<div className={styles.teamCard}>
-							<a href="mailto:bibek@example.com" className={styles.teamLink} target="_blank" rel="noopener noreferrer">
-								<div className={styles.teamImageContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face" 
-										alt="Bibek Niroula" 
-										className={styles.teamImage}
-									/>
-								</div>
-								<div className={styles.teamInfo}>
-									<h4 className={styles.teamName}>Bibek Niroula</h4>
-								</div>
-							</a>
+						<div className={styles.deliveryTeamCard}>
+							<h4 className={styles.deliveryTeamName}>Bibek Niroula</h4>
 						</div>
-						<div className={styles.teamCard}>
-							<a href="mailto:niyoj@example.com" className={styles.teamLink} target="_blank" rel="noopener noreferrer">
-								<div className={styles.teamImageContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=100&h=100&fit=crop&crop=face" 
-										alt="Niyoj Oli" 
-										className={styles.teamImage}
-									/>
-								</div>
-								<div className={styles.teamInfo}>
-									<h4 className={styles.teamName}>Niyoj Oli</h4>
-								</div>
-							</a>
+						<div className={styles.deliveryTeamCard}>
+							<h4 className={styles.deliveryTeamName}>Niyoj Oli</h4>
 						</div>
-						<div className={styles.teamCard}>
-							<a href="mailto:ruyin.feng@epfl.ch" className={styles.teamLink} target="_blank" rel="noopener noreferrer">
-								<div className={styles.teamImageContainer}>
-									<img 
-										src="https://images.unsplash.com/photo-1494790108755-2616c4e11db6?w=100&h=100&fit=crop&crop=face" 
-										alt="Ruyin Feng" 
-										className={styles.teamImage}
-									/>
-								</div>
-								<div className={styles.teamInfo}>
-									<h4 className={styles.teamName}>Ruyin Feng</h4>
-								</div>
-							</a>
+						<div className={styles.deliveryTeamCard}>
+							<h4 className={styles.deliveryTeamName}>Ruyin Feng</h4>
 						</div>
 					</div>
 				</div>
-				
+
 				<Shapes variant="small" color="blue" />
 			</section>
 		</>

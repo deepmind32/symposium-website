@@ -1,0 +1,38 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 100vw;
+	height: 80px;
+	background-color: var(--color-dark-blue);
+	padding: 0 2rem;
+}
+
+.navbar__logo__wrapper > img {
+	height: 40px;
+	width: auto;
+}
+
+.navbar__logo--pictorial {
+	display: none;
+}
+
+.navbar__action_btns button {
+	background-color: var(--color-dark-orange);
+}
+
+@media  screen and (max-width: 600px) {
+	.navbar__action_btns {
+		display: none;
+	}
+
+	.navbar {
+		padding: 0 1rem;
+	}
+}

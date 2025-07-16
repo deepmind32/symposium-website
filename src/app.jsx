@@ -1,6 +1,7 @@
 import { Routes, Route, Link, HashRouter } from "react-router-dom";
 
-import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/dummy-navbar/dummy-navbar";
+// import Navbar from "./components/navbar/navbar";
 import HomePage from "./pages/home/home";
 import AboutPage from "./pages/about/about";
 import DataHubPage from "./pages/datahub/datahub";
@@ -10,10 +11,10 @@ import styles from "./app.module.css";
 import Footer from "./components/footer/footer";
 
 const menu_items = [
-	{ href: "/", text: "Home" },
-	{ href: "/about", text: "About PriFed" },
-	{ href: "/datahub", text: "DataHub" },
-	{ href: "/symposium", text: "Symposium" },
+	// { href: "/", text: "Home" },
+	// { href: "/about", text: "About PriFed" },
+	// { href: "/datahub", text: "DataHub" },
+	// { href: "/symposium", text: "Symposium" },
 ];
 
 const cta_item = {
@@ -23,7 +24,8 @@ const cta_item = {
 
 export default function App() {
 	return (
-		<HashRouter>
+		// <HashRouter>
+		<>
 			<Navbar
 				menu_items={menu_items}
 				cta_item={cta_item}
@@ -31,14 +33,17 @@ export default function App() {
 				wordmark="./logo--white.png"
 			/>
 
-			<Routes>
+			<SymposiumPage />
+
+			{/* <Routes>
 				<Route path="/" element={<HomePage />} />
 				<Route path="/about" element={<AboutPage />} />
 				<Route path="/datahub" element={<DataHubPage />} />
 				<Route path="/symposium" element={<SymposiumPage />} />
-			</Routes>
+			</Routes> */}
 
 			<Footer />
-		</HashRouter>
+		</>
+		// {/* </HashRouter> */}
 	);
 }

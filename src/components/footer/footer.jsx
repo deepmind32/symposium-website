@@ -10,7 +10,7 @@ export default function Footer() {
 					<img src="./logo--white.png" alt="Prifed Logo" />
 					<p>
 						<span className="u-color-dark-orange">
-							Privacy Preserving Federated Learning
+							Privacy Preservation of Data through Federated Learning
 						</span>
 						, an initiative by HAINet.
 					</p>
