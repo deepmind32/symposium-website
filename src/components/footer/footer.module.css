@@ -41,15 +41,16 @@
 }
 
 .footer__right p {
-	font-size: 1.2rem;
+	font-size: var(--font-size-h4);
 }
 
 .footer__right a {
+	font-size: var(--font-size-p);
 	color: var(--color-dark-orange);
 	text-decoration: underline;
 	text-underline-offset: 0.5rem;
 	display: block;
-	font-size: 2rem;
+	text-align: right;
 }
 
 .footer__bottom p {

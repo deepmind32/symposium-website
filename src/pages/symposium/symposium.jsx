@@ -8,16 +8,16 @@ export default function SymposiumPage() {
 		<>
 			<section className={styles.hero}>
 				<div className={styles.heroContent}>
-					<div className={styles.heroTag}>International Symposium 2025</div>
+					<div className={styles.heroTag}>PriFed Symposium - 2025</div>
 
-					<span className={styles.subtitle}>PriFed Symposium - 2025</span>
+					{/* <span className={styles.subtitle}>PriFed Symposium - 2025</span> */}
 					<h1 className={`${styles.mainTitle} u-font-heading`}>
 						Privacy Preservation of Data through Federated Learning
 					</h1>
 
 					<p className={styles.heroDescription}>
-						Advancing Health AI Innovation Through Secure, Ethical, and
-						Inclusive Collaboration Without Sharing Raw Data
+						Advancing Health AI innovation through secure, ethical, and
+						inclusive collaboration without sharing raw data
 					</p>
 
 					<div className={styles.eventDetails}>
@@ -211,8 +211,10 @@ export default function SymposiumPage() {
 					Organizers and Partners
 				</h2>
 				<p className={styles.description}>
-					The symposium is jointly organized by the Health AI for All Network
-					(HAINet), UNIL Lausanne, IIT Delhi, and University of Aberdeen.
+					The symposium is organized by the Health AI for All Network (HAINet),
+					in collaboration with faculty members from UNIL Lausanne, IIT Delhi,
+					and University of Aberdeen. The symposium is supported by Leading
+					House South Asia at ZHAW, Switzerland.
 				</p>
 
 				{/* Organization Logos */}
@@ -235,7 +237,7 @@ export default function SymposiumPage() {
 										className={styles.logoImage}
 									/>
 								</div>
-								<p className={styles.logoLabel}>Health AI for All Network</p>
+								{/* <p className={styles.logoLabel}>Health AI for All Network</p> */}
 							</a>
 						</div>
 						<div className={styles.logoItem}>
@@ -252,7 +254,7 @@ export default function SymposiumPage() {
 										className={styles.logoImage}
 									/>
 								</div>
-								<p className={styles.logoLabel}>University of Lausanne</p>
+								{/* <p className={styles.logoLabel}>University of Lausanne</p> */}
 							</a>
 						</div>
 						<div className={styles.logoItem}>
@@ -269,7 +271,7 @@ export default function SymposiumPage() {
 										className={styles.logoImage}
 									/>
 								</div>
-								<p className={styles.logoLabel}>University of Aberdeen</p>
+								{/* <p className={styles.logoLabel}>University of Aberdeen</p> */}
 							</a>
 						</div>
 						<div className={styles.logoItem}>
@@ -287,9 +289,9 @@ export default function SymposiumPage() {
 										className={styles.logoImage}
 									/>
 								</div>
-								<p className={styles.logoLabel}>
+								{/* <p className={styles.logoLabel}>
 									Indian Institute of Technology Delhi
-								</p>
+								</p> */}
 							</a>
 						</div>
 					</div>
