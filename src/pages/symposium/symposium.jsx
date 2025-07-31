@@ -327,7 +327,7 @@ export default function SymposiumPage() {
 									// linkedin: null,
 									twitter: "https://x.com/KiranRP",
 								},
-								type: "Co-Chairs",
+								type: "Co-Chair",
 							}}
 						/>
 						<TeamMemberCard
@@ -341,7 +341,7 @@ export default function SymposiumPage() {
 									linkedin: "https://www.linkedin.com/in/yash-raj-shrestha",
 									// twitter: "https://x.com/KiranRP",
 								},
-								type: "Co-Chairs",
+								type: "Co-Chair",
 							}}
 						/>
 					</div>
@@ -357,13 +357,13 @@ export default function SymposiumPage() {
 							<h4 className={styles.deliveryTeamName}>Aavash Chhetri</h4>
 						</div>
 						<div className={styles.deliveryTeamCard}>
+							<h4 className={styles.deliveryTeamName}>Ruyin Feng</h4>
+						</div>
+						<div className={styles.deliveryTeamCard}>
 							<h4 className={styles.deliveryTeamName}>Bibek Niroula</h4>
 						</div>
 						<div className={styles.deliveryTeamCard}>
 							<h4 className={styles.deliveryTeamName}>Niyoj Oli</h4>
-						</div>
-						<div className={styles.deliveryTeamCard}>
-							<h4 className={styles.deliveryTeamName}>Ruyin Feng</h4>
 						</div>
 					</div>
 				</div>
