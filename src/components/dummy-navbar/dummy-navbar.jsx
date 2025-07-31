@@ -7,9 +7,9 @@ export default function DummyNavbar() {
 			<div className={styles["navbar__logo__wrapper"]}>
 				<img
 					className={styles["navbar__logo--wordmark"]}
-					src="./logo--white.png"
+					src="./hainet--white.png"
 					alt="Wordmark of Prifed"
-				/>{" "}
+				/>
 				<img
 					className={styles["navbar__logo--pictorial"]}
 					src="./pictorial.png"

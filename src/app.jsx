@@ -30,7 +30,7 @@ export default function App() {
 				menu_items={menu_items}
 				cta_item={cta_item}
 				pictorial="./pictorial.png"
-				wordmark="./logo--white.png"
+				wordmark="./hainet--white.png"
 			/>
 
 			<SymposiumPage />
