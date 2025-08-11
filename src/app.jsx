@@ -1,14 +1,16 @@
 import { Routes, Route, Link, HashRouter } from "react-router-dom";
 
-import Navbar from "./components/dummy-navbar/dummy-navbar";
+// import Navbar from "./components/dummy-navbar/dummy-navbar";
 // import Navbar from "./components/navbar/navbar";
+import Navbar from "./components/imported/navbar/navbar";
 import HomePage from "./pages/home/home";
 import AboutPage from "./pages/about/about";
 import DataHubPage from "./pages/datahub/datahub";
 import SymposiumPage from "./pages/symposium/symposium";
 
 import styles from "./app.module.css";
-import Footer from "./components/footer/footer";
+// import Footer from "./components/footer/footer";
+import Footer from "./components/imported/footer/footer";
 
 const menu_items = [
 	// { href: "/", text: "Home" },
@@ -27,10 +29,10 @@ export default function App() {
 		// <HashRouter>
 		<>
 			<Navbar
-				menu_items={menu_items}
-				cta_item={cta_item}
-				pictorial="./pictorial.png"
-				wordmark="./hainet--white.png"
+				// menu_items={menu_items}
+				// cta_item={cta_item}
+				// pictorial="./pictorial.png"
+				// wordmark="./hainet--white.png"
 			/>
 
 			<SymposiumPage />
