@@ -161,17 +161,13 @@ export default function SymposiumPage() {
 						<span className={styles.dateLabel}>
 							Expression of Interest Submission Deadline:
 						</span>
-						<span className={styles.dateValue}>To be announced</span>
+						<span className={styles.dateValue}>28 August, 2025</span>
 					</div>
 					<div className={styles.dateItem}>
 						<span className={styles.dateLabel}>
 							Notification of Acceptance:
 						</span>
-						<span className={styles.dateValue}>To be announced</span>
-					</div>
-					<div className={styles.dateItem}>
-						<span className={styles.dateLabel}>Registration Deadline:</span>
-						<span className={styles.dateValue}>To be announced</span>
+						<span className={styles.dateValue}>1 September, 2025</span>
 					</div>
 					<div className={styles.dateItem}>
 						<span className={styles.dateLabel}>Symposium Dates:</span>
@@ -219,21 +215,22 @@ export default function SymposiumPage() {
 
 				{/* Organization Logos */}
 				<div className={styles.organizationLogos}>
-					<h3 className={`${styles.subsectionTitle} u-font-heading`}>
+					{/* <h3 className={`${styles.subsectionTitle} u-font-heading`}>
 						Partner Organizations
-					</h3>
+					</h3> */}
 					<div className={styles.logoGrid}>
 						<div className={styles.logoItem}>
 							<a
-								href="https://hainet.org"
+								href="https://www.zhaw.ch/en/university"
 								className={styles.logoLink}
 								target="_blank"
 								rel="noopener noreferrer"
 							>
 								<div className={styles.logoContainer}>
 									<img
-										src="./organizations/hainet.png"
-										alt="HAINet Logo"
+										src="./organizations/zhaw.png"
+										alt="ZHAW Logo"
+										style={{ width: 100, height: "auto" }}
 										className={styles.logoImage}
 									/>
 								</div>
