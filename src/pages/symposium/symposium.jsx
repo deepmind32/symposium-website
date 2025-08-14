@@ -241,7 +241,8 @@ export default function SymposiumPage() {
 					The symposium is organized by the Health AI for All Network (HAINet),
 					in collaboration with faculty members from UNIL Lausanne, IIT Delhi,
 					and University of Aberdeen. The symposium is supported by Leading
-					House South Asia at ZHAW, Switzerland.
+					House South Asia at ZHAW, Switzerland and Nepal Applied Mathematics
+					and Informatics Institute for Research, Nepal.
 				</p>
 
 				{/* Organization Logos */}
