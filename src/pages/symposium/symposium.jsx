@@ -3,6 +3,37 @@ import Button from "../../components/button/button";
 import Shapes from "../../components/shapes/shapes";
 import TeamMemberCard from "../../components/team/team";
 
+const organizations = [
+	{
+		name: "NAAMII",
+		url: "https://www.naamii.org.np/",
+		logo: "/organizations/naamii.png",
+		width: 100,
+	},
+	{
+		name: "ZHAW",
+		url: "https://www.zhaw.ch/en/university",
+		logo: "/organizations/zhaw.png",
+		width: 100,
+	},
+	{
+		name: "University of Lausanne",
+		url: "https://unil.ch",
+		logo: "/organizations/unil.png",
+	},
+	{
+		name: "University of Aberdeen",
+		url: "https://abdn.ac.uk",
+		logo: "/organizations/aberdeen.png",
+	},
+	{
+		name: "IIT Delhi",
+		url: "https://iitd.ac.in",
+		logo: "/organizations/iit-delhi.png",
+		width: 100,
+	},
+];
+
 export default function SymposiumPage() {
 	return (
 		<>
@@ -219,78 +250,26 @@ export default function SymposiumPage() {
 						Partner Organizations
 					</h3> */}
 					<div className={styles.logoGrid}>
-						<div className={styles.logoItem}>
-							<a
-								href="https://www.zhaw.ch/en/university"
-								className={styles.logoLink}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<div className={styles.logoContainer}>
-									<img
-										src="./organizations/zhaw.png"
-										alt="ZHAW Logo"
-										style={{ width: 100, height: "auto" }}
-										className={styles.logoImage}
-									/>
-								</div>
-								{/* <p className={styles.logoLabel}>Health AI for All Network</p> */}
-							</a>
-						</div>
-						<div className={styles.logoItem}>
-							<a
-								href="https://unil.ch"
-								className={styles.logoLink}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<div className={styles.logoContainer}>
-									<img
-										src="./organizations/unil.png"
-										alt="UNIL Logo"
-										className={styles.logoImage}
-									/>
-								</div>
-								{/* <p className={styles.logoLabel}>University of Lausanne</p> */}
-							</a>
-						</div>
-						<div className={styles.logoItem}>
-							<a
-								href="https://abdn.ac.uk"
-								className={styles.logoLink}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<div className={styles.logoContainer}>
-									<img
-										src="./organizations/aberdeen.png"
-										alt="Aberdeen Logo"
-										className={styles.logoImage}
-									/>
-								</div>
-								{/* <p className={styles.logoLabel}>University of Aberdeen</p> */}
-							</a>
-						</div>
-						<div className={styles.logoItem}>
-							<a
-								href="https://iitd.ac.in"
-								className={styles.logoLink}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<div className={styles.logoContainer}>
-									<img
-										src="./organizations/iit-delhi.png"
-										alt="IIT Delhi Logo"
-										style={{ width: 100, height: "auto" }}
-										className={styles.logoImage}
-									/>
-								</div>
-								{/* <p className={styles.logoLabel}>
-									Indian Institute of Technology Delhi
-								</p> */}
-							</a>
-						</div>
+						{organizations.map((org) => (
+							<div className={styles.logoItem} key={org["name"]}>
+								<a
+									href={org["url"]}
+									className={styles.logoLink}
+									target="_blank"
+									rel="noopener noreferrer"
+								>
+									<div className={styles.logoContainer}>
+										<img
+											src={`${org["logo"]}`}
+											alt={`${org["name"]} Logo`}
+											style={{ width: org["width"] ?? null, height: "auto" }}
+											className={styles.logoImage}
+										/>
+										{/* <p className={styles.logoLabel}> {org["name"]} </p> */}
+									</div>
+								</a>
+							</div>
+						))}
 					</div>
 				</div>
 

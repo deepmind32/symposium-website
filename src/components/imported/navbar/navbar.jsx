@@ -117,7 +117,7 @@ const Navbar = () => {
 					</ul>{" "}
 					<div className={styles.mobileMenuButton}>
 						<a href="https://forms.gle/gpUVx16gSf5jsM5x7" onClick={closeMenu}>
-							<Button variant="primary">Become a Member</Button>
+							<Button variant="primary">Register Now</Button>
 						</a>
 					</div>
 				</div>
