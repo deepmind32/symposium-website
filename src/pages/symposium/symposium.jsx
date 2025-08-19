@@ -43,7 +43,7 @@ export default function SymposiumPage() {
 
 					{/* <span className={styles.subtitle}>PriFed Symposium - 2025</span> */}
 					<h1 className={`${styles.mainTitle} u-font-heading`}>
-						Privacy Preservation of Data through Federated Learning
+						Privacy Preservation of Health Data through Federated Learning
 					</h1>
 
 					<p className={styles.heroDescription}>
@@ -235,7 +235,7 @@ export default function SymposiumPage() {
 				<h2
 					className={`${styles.sectionTitle} u-font-heading u-gradient-underline`}
 				>
-					Organizers and Partners
+					Partners
 				</h2>
 				<p className={styles.description}>
 					The symposium is organized by the Health AI for All Network (HAINet),
