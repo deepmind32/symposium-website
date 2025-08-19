@@ -15,7 +15,8 @@ export default function Footer() {
 						{/* Privacy Preservation of Data through Federated Learning, an initiative by HAINet. */}
 					</h2>
 					<p className={styles.footer__subtitle}>
-						Privacy Preservation of Data through Federated Learning, an initiative by HAINet.
+						Privacy Preservation of Health Data through Federated Learning, an
+						initiative by HAINet.
 					</p>
 					<a href="https://forms.gle/gpUVx16gSf5jsM5x7">
 						<Button className="u-background-dark-orange">Register Now</Button>
