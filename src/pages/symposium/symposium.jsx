@@ -313,9 +313,10 @@ export default function SymposiumPage() {
 								role: "University of Lausanne",
 								image: "./teams/yash.png",
 								socials: {
-									website:
+									scholar:
 										"https://scholar.google.com/citations?user=LaJfdx0AAAAJ",
 									linkedin: "https://www.linkedin.com/in/yash-raj-shrestha",
+									website: "https://wp.unil.ch/aail/team/",
 									// twitter: "https://x.com/KiranRP",
 								},
 								type: "Co-Chair",
