@@ -1,0 +1,21 @@
+.speaker {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.speaker img {
+	width: 175px;
+	height: 175px;
+	border-radius: 50%;
+}
+
+.speaker p {
+	text-align: center;
+}
+
+.speaker__info p:first-child{
+	font-size: 1.2rem;
+	font-weight: 500;
+}

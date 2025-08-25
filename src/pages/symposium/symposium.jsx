@@ -2,6 +2,8 @@ import styles from "./symposium.module.css";
 import Button from "../../components/button/button";
 import Shapes from "../../components/shapes/shapes";
 import TeamMemberCard from "../../components/team/team";
+import SpeakerCard from "../../components/speakers/speakers";
+import { image } from "framer-motion/client";
 
 const organizations = [
 	{
@@ -31,6 +33,39 @@ const organizations = [
 		url: "https://iitd.ac.in",
 		logo: "/organizations/iit-delhi.png",
 		width: 100,
+	},
+];
+
+const speakers = [
+	{
+		name: "Hon. Swarnim Waglé",
+		role: "Member of Parliament, Nepal",
+		image: "/speakers/swarnim.png",
+	},
+	{
+		name: "Sneha Krishnan",
+		role: "OP Jindal Global University, India",
+		image: "/speakers/sneha.png",
+	},
+	{
+		name: "Katie Wilde",
+		role: "University of Aberdeen, UK",
+		image: "/speakers/katie.png",
+	},
+	{
+		name: "Chetan Arora",
+		role: "IIT Delhi, India",
+		image: "/speakers/chetan.png",
+	},
+	{
+		name: "Kiran Raj Pandey",
+		role: "Health AI for All Network",
+		image: "/speakers/kiran.png",
+	},
+	{
+		name: "Binod Bhattarai",
+		role: "University of Aberdeen, UK",
+		image: "/speakers/binod.png",
 	},
 ];
 
@@ -270,6 +305,23 @@ export default function SymposiumPage() {
 									</div>
 								</a>
 							</div>
+						))}
+					</div>
+				</div>
+
+				<div className={styles["speakers"]}>
+					<h3 className={`${styles.subsectionTitle} u-font-heading`}>
+						Speakers
+					</h3>
+
+					<div className={styles["speakers__grid"]}>
+						{speakers.map((speaker) => (
+							<SpeakerCard
+								name={speaker["name"]}
+								role={speaker["role"]}
+								image={speaker["image"]}
+								key={speaker["image"]}
+							/>
 						))}
 					</div>
 				</div>

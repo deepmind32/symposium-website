@@ -369,6 +369,14 @@
 	margin: 4rem 0;
 }
 
+.speakers__grid {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: center;
+	gap: 2rem;
+}
+
 .chairsGrid {
 	display: flex;
 	flex-direction: row;
