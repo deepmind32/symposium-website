@@ -43,6 +43,11 @@ const speakers = [
 		image: "/speakers/swarnim.png",
 	},
 	{
+		name: "HMA Rob Fenn",
+		role: "British Ambassador to Nepal",
+		image: "/speakers/rob.png",
+	},
+	{
 		name: "Sneha Krishnan",
 		role: "OP Jindal Global University, India",
 		image: "/speakers/sneha.png",
@@ -265,6 +270,107 @@ export default function SymposiumPage() {
 				</p>
 			</section>
 
+			<section className={styles["section__speakers"]}>
+				<h2
+					className={`${styles.sectionTitle} u-font-heading u-gradient-underline`}
+				>
+					Confirmed Speakers and Panellists
+				</h2>
+				<div className={styles["speakers__grid"]}>
+					{speakers.map((speaker) => (
+						<SpeakerCard
+							name={speaker["name"]}
+							role={speaker["role"]}
+							image={speaker["image"]}
+							key={speaker["image"]}
+						/>
+					))}
+				</div>
+
+				<div className={styles["speakers__comming_soon"]}>
+					<p>
+						Further speakers and panellists are in the process of confirmation
+						and will be announced shortly. Updates will be shared on this page.
+					</p>
+				</div>
+				<Shapes variant="small" color="blue" />
+			</section>
+
+			{/* Organizing Chairs */}
+			<section className={styles["section__chairs"]}>
+				<h2
+					className={`${styles.sectionTitle} u-font-heading u-gradient-underline`}
+				>
+					Organizing Chairs
+				</h2>
+				<div className={styles.chairsGrid}>
+					<TeamMemberCard
+						member={{
+							name: "Prof. Binod Bhattarai",
+							role: "University of Aberdeen",
+							image: "./teams/binod.png",
+							socials: {
+								website: "https://sites.google.com/view/bbinod/",
+								linkedin:
+									"https://www.linkedin.com/in/binod-bhattarai-3a857a24/",
+								twitter: "https://x.com/realBBhattarai",
+							},
+							type: "Symposium Chair",
+						}}
+					/>
+					<TeamMemberCard
+						member={{
+							name: "Dr. Kiran Raj Pandey",
+							role: "Health AI for All Network",
+							image: "./teams/kiran.png",
+							socials: {
+								website: "https://www.kiranrajpandey.com/",
+								// linkedin: null,
+								twitter: "https://x.com/KiranRP",
+							},
+							type: "Co-Chair",
+						}}
+					/>
+					<TeamMemberCard
+						member={{
+							name: "Prof. Yash Raj Shrestha",
+							role: "University of Lausanne",
+							image: "./teams/yash.png",
+							socials: {
+								scholar:
+									"https://scholar.google.com/citations?user=LaJfdx0AAAAJ",
+								linkedin: "https://www.linkedin.com/in/yash-raj-shrestha",
+								website: "https://wp.unil.ch/aail/team/",
+								// twitter: "https://x.com/KiranRP",
+							},
+							type: "Co-Chair",
+						}}
+					/>
+				</div>
+
+				{/* Delivery Team */}
+				<div className={styles.deliveryTeam}>
+					<h3 className={`${styles.subsectionTitle} u-font-heading`}>
+						Delivery Team
+					</h3>
+					<div className={styles.deliveryTeamGrid}>
+						<div className={styles.deliveryTeamCard}>
+							<h4 className={styles.deliveryTeamName}>Aavash Chhetri</h4>
+						</div>
+						<div className={styles.deliveryTeamCard}>
+							<h4 className={styles.deliveryTeamName}>Ruyin Feng</h4>
+						</div>
+						<div className={styles.deliveryTeamCard}>
+							<h4 className={styles.deliveryTeamName}>Bibek Niroula</h4>
+						</div>
+						<div className={styles.deliveryTeamCard}>
+							<h4 className={styles.deliveryTeamName}>Niyoj Oli</h4>
+						</div>
+					</div>
+				</div>
+				<Shapes variant="big" color="blue" />
+			</section>
+
 			{/* Organizers Section */}
 			<section className={styles["section__organizers"]}>
 				<h2
@@ -308,97 +414,6 @@ export default function SymposiumPage() {
 						))}
 					</div>
 				</div>
-
-				<div className={styles["speakers"]}>
-					<h3 className={`${styles.subsectionTitle} u-font-heading`}>
-						Speakers
-					</h3>
-
-					<div className={styles["speakers__grid"]}>
-						{speakers.map((speaker) => (
-							<SpeakerCard
-								name={speaker["name"]}
-								role={speaker["role"]}
-								image={speaker["image"]}
-								key={speaker["image"]}
-							/>
-						))}
-					</div>
-				</div>
-
-				{/* Organizing Chairs */}
-				<div className={styles.organizingChairs}>
-					<h3 className={`${styles.subsectionTitle} u-font-heading`}>
-						Organizing Chairs
-					</h3>
-					<div className={styles.chairsGrid}>
-						<TeamMemberCard
-							member={{
-								name: "Prof. Binod Bhattarai",
-								role: "University of Aberdeen",
-								image: "./teams/binod.png",
-								socials: {
-									website: "https://sites.google.com/view/bbinod/",
-									linkedin:
-										"https://www.linkedin.com/in/binod-bhattarai-3a857a24/",
-									twitter: "https://x.com/realBBhattarai",
-								},
-								type: "Symposium Chair",
-							}}
-						/>
-						<TeamMemberCard
-							member={{
-								name: "Dr. Kiran Raj Pandey",
-								role: "Health AI for All Network",
-								image: "./teams/kiran.png",
-								socials: {
-									website: "https://www.kiranrajpandey.com/",
-									// linkedin: null,
-									twitter: "https://x.com/KiranRP",
-								},
-								type: "Co-Chair",
-							}}
-						/>
-						<TeamMemberCard
-							member={{
-								name: "Prof. Yash Raj Shrestha",
-								role: "University of Lausanne",
-								image: "./teams/yash.png",
-								socials: {
-									scholar:
-										"https://scholar.google.com/citations?user=LaJfdx0AAAAJ",
-									linkedin: "https://www.linkedin.com/in/yash-raj-shrestha",
-									website: "https://wp.unil.ch/aail/team/",
-									// twitter: "https://x.com/KiranRP",
-								},
-								type: "Co-Chair",
-							}}
-						/>
-					</div>
-				</div>
-
-				{/* Delivery Team */}
-				<div className={styles.deliveryTeam}>
-					<h3 className={`${styles.subsectionTitle} u-font-heading`}>
-						Delivery Team
-					</h3>
-					<div className={styles.deliveryTeamGrid}>
-						<div className={styles.deliveryTeamCard}>
-							<h4 className={styles.deliveryTeamName}>Aavash Chhetri</h4>
-						</div>
-						<div className={styles.deliveryTeamCard}>
-							<h4 className={styles.deliveryTeamName}>Ruyin Feng</h4>
-						</div>
-						<div className={styles.deliveryTeamCard}>
-							<h4 className={styles.deliveryTeamName}>Bibek Niroula</h4>
-						</div>
-						<div className={styles.deliveryTeamCard}>
-							<h4 className={styles.deliveryTeamName}>Niyoj Oli</h4>
-						</div>
-					</div>
-				</div>
-
-				<Shapes variant="small" color="blue" />
 			</section>
 		</>
 	);

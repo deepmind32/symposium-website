@@ -365,6 +365,31 @@
 	max-width: 200px !important	;
 }
 
+.speakers__comming_soon {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 2rem 1rem;
+	margin-top: 2rem;
+}
+
+.speakers__comming_soon p {
+	font-size: var(--font-size-h4);
+	font-weight: 300;
+	color: rgba(0, 0, 0, 0.5)
+}
+
+.section__speakers {
+	position: relative;
+	background: var(--color-blue-overlay);
+	padding: 3rem 2rem;
+}
+
+.section__chairs {
+	position: relative;
+	padding: 3rem 2rem;
+}
+
 .organizingChairs {
 	margin: 4rem 0;
 }
